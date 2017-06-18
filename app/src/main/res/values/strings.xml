@@ -2,5 +2,10 @@
     <string name="app_name">MisContactos</string>
     <string name="nombre">Ruber Octavio</string>
     <string name="telefono">98755455</string>
-    <string name="email">ruberoctavio@gmail.com</string>
+    <string name="email">roctavio@gmail.com</string>
+
+    <string name="pnombre">nombre</string>
+    <string name="ptelefono">telefono</string>
+    <string name="pemail">pemail</string>
+
 </resources>

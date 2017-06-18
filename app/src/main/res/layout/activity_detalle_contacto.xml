@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginLeft="10dp"
+        android:onClick="llamar"
         >
 
         <ImageView
@@ -40,6 +41,13 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:onClick="enviarMail">
+
     <TextView
         android:id="@+id/tvEmail"
         android:layout_width="wrap_content"
@@ -47,4 +55,6 @@
         android:text="@string/email"
         android:layout_marginLeft="10dp"
         android:textSize="25dp"/>
+
+    </LinearLayout>
 </LinearLayout>

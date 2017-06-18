@@ -1,7 +1,10 @@
 package com.example.asus.miscontactos;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -33,5 +36,17 @@ public class MainActivity extends AppCompatActivity {
 
         ListView lstContactos=(ListView)findViewById(R.id.lstContactos);
         lstContactos.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,nombresContacto));
+
+        lstContactos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Intent intent=new Intent(MainActivity.this,DetalleContacto.class);
+                intent.putExtra(getResources().getString(R.string.pnombre),contactos.get(position).getNombre()); //Esto me permite enviar varios parámetro con un objeto concreto
+                intent.putExtra(getResources().getString(R.string.ptelefono),contactos.get(position).getTelefono());
+                intent.putExtra(getResources().getString(R.string.pemail),contactos.get(position).getEmail());
+
+                startActivity(intent);
+            }
+        });
     }
 }
